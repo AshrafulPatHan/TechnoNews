@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import * as React from 'react';
+import {createBrowserRouter,RouterProvider,} from "react-router";
 import './index.css'
-import App from './App.tsx'
+import App from './App'
+import Nav from './components/navigation/Navbar.jsx'
+import { Toaster } from 'react-hot-toast';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import ReactDOM from "react-dom/client";
+
+const router = createBrowserRouter([
+  {path: "/",element: <App />},
+  {path: "/nav",element: <Nav/>},
+]);
+
+const root = document.getElementById("root");
+
+ReactDOM.createRoot(root).render(
+  <div>
+    <RouterProvider router={router} />
+    <Toaster />
+  </div>
+  
+);
+

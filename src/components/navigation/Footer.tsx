@@ -3,7 +3,7 @@
 const Footer = () => {
    return (
       <div>
-         <div className="flex flex-col bg-amber-200 py-5 ">
+         <div className="flex flex-col bg-blue-300 py-5 ">
             <div className=" flex flex-row justify-evenly ">
                <div>
                   <p>#Techno Blogger</p>

@@ -6,12 +6,14 @@ import { Toaster } from 'react-hot-toast';
 import ReactDOM from "react-dom/client";
 import Error404 from './Error404';
 import Login from './page/auth/Login';
+import Registration from './page/auth/Registration';
 
 
 
 const router = createBrowserRouter([
   {path: "/",element: <App />},
   {path: "/login",element: <Login />},
+  {path: "/registration",element: <Registration />},
   {path: "*",element: <Error404 />}
 ]);
 
